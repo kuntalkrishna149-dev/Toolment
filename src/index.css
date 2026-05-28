@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Base Theme Mappings */
+:root {
+  /* Default Theme: Light Theme */
+  --bg: hsl(220, 25%, 94%);
+  --sidebarBg: hsl(220, 25%, 90%);
+  --mainBg: hsl(220, 25%, 97%);
+  --card1: hsl(0, 0%, 100%);
+  --card2: hsl(220, 20%, 95%);
+  --tagBg: rgba(0, 0, 0, 0.03);
+  --textColor: hsl(220, 45%, 15%);
+  --textMuted: hsl(220, 15%, 45%);
+  --line-clr: rgba(0, 0, 0, 0.1);
+  --line-clr-blue: hsl(215, 75%, 70%);
+  --active-clr: hsla(215, 100%, 40%, 0.08);
+  --hover-clr: hsla(215, 100%, 40%, 0.04);
+  --theme: hsl(215, 85%, 45%);
+  --theme2: hsl(270, 65%, 40%);
+  --theme3: #e11d48;
+  --theme4: hsl(42, 95%, 45%);
+}
+
+/* Dark Theme (identical to root base, explicitly defined) */
+[data-theme="dark"] {
+  --bg: hsl(226, 60%, 4%);
+  --sidebarBg: hsl(226, 60%, 9%);
+  --mainBg: hsl(226, 60%, 7%);
+  --card1: hsl(225, 45%, 12%);
+  --card2: hsl(225, 45%, 8%);
+  --tagBg: rgba(255, 255, 255, 0.03);
+  --textColor: #ffffff;
+  --textMuted: hsl(225, 15%, 65%);
+  --line-clr: rgba(255, 255, 255, 0.12);
+  --line-clr-blue: hsl(215, 50%, 35%);
+  --active-clr: hsla(215, 100%, 60%, 0.15);
+  --hover-clr: hsla(215, 100%, 50%, 0.1);
+  --theme: hsl(215, 80%, 55%);
+  --theme2: hsl(272.9, 57.8%, 37.2%);
+  --theme3: #f43f5e;
+  --theme4: hsl(58.2, 83.5%, 68%);
+}
+
+/* Light Theme: Squeaky Clean UI Theme */
+[data-theme="light"] {
+  --bg: hsl(220, 25%, 94%);
+  --sidebarBg: hsl(220, 25%, 90%);
+  --mainBg: hsl(220, 25%, 97%);
+  --card1: hsl(0, 0%, 100%);
+  --card2: hsl(220, 20%, 95%);
+  --tagBg: rgba(0, 0, 0, 0.03);
+  --textColor: hsl(220, 45%, 15%);
+  --textMuted: hsl(220, 15%, 45%);
+  --line-clr: rgba(0, 0, 0, 0.1);
+  --line-clr-blue: hsl(215, 75%, 70%);
+  --active-clr: hsla(215, 100%, 40%, 0.08);
+  --hover-clr: hsla(215, 100%, 40%, 0.04);
+  --theme: hsl(215, 85%, 45%);
+  --theme2: hsl(270, 65%, 40%);
+  --theme3: #e11d48;
+  --theme4: hsl(42, 95%, 45%);
+}
+
+/* Emerald Theme: Cyber Green Rainforest Theme */
+[data-theme="emerald"] {
+  --bg: hsl(150, 45%, 4%);
+  --sidebarBg: hsl(150, 45%, 8%);
+  --mainBg: hsl(150, 45%, 6%);
+  --card1: hsl(150, 35%, 11%);
+  --card2: hsl(150, 35%, 8%);
+  --tagBg: rgba(255, 255, 255, 0.03);
+  --textColor: hsl(150, 20%, 95%);
+  --textMuted: hsl(150, 10%, 65%);
+  --line-clr: rgba(255, 255, 255, 0.1);
+  --line-clr-blue: hsl(142, 45%, 28%);
+  --active-clr: hsla(142, 100%, 40%, 0.12);
+  --hover-clr: hsla(142, 100%, 35%, 0.08);
+  --theme: hsl(142, 70%, 45%);
+  --theme2: hsl(160, 65%, 28%);
+  --theme3: #f43f5e;
+  --theme4: hsl(75, 85%, 60%);
+}
+
+/* Ruby Theme: Crimson Sunrise Theme */
+[data-theme="ruby"] {
+  --bg: hsl(340, 45%, 4%);
+  --sidebarBg: hsl(340, 45%, 8%);
+  --mainBg: hsl(340, 45%, 6%);
+  --card1: hsl(340, 35%, 11%);
+  --card2: hsl(340, 35%, 8%);
+  --tagBg: rgba(255, 255, 255, 0.03);
+  --textColor: hsl(340, 20%, 95%);
+  --textMuted: hsl(340, 10%, 65%);
+  --line-clr: rgba(255, 255, 255, 0.1);
+  --line-clr-blue: hsl(346, 45%, 28%);
+  --active-clr: hsla(346, 100%, 40%, 0.12);
+  --hover-clr: hsla(346, 100%, 35%, 0.08);
+  --theme: hsl(346, 80%, 55%);
+  --theme2: hsl(320, 65%, 32%);
+  --theme3: hsl(200, 80%, 50%);
+  --theme4: hsl(35, 90%, 65%);
+}
+
+/* Ocean Theme: Deep Midnight Ocean */
+[data-theme="ocean"] {
+  --bg: hsl(205, 55%, 4%);
+  --sidebarBg: hsl(205, 55%, 8%);
+  --mainBg: hsl(205, 55%, 6%);
+  --card1: hsl(205, 45%, 11%);
+  --card2: hsl(205, 45%, 8%);
+  --tagBg: rgba(255, 255, 255, 0.03);
+  --textColor: hsl(205, 25%, 95%);
+  --textMuted: hsl(205, 15%, 65%);
+  --line-clr: rgba(255, 255, 255, 0.1);
+  --line-clr-blue: hsl(198, 55%, 28%);
+  --active-clr: hsla(198, 100%, 40%, 0.14);
+  --hover-clr: hsla(198, 100%, 35%, 0.08);
+  --theme: hsl(198, 85%, 50%);
+  --theme2: hsl(215, 75%, 35%);
+  --theme3: #f43f5e;
+  --theme4: hsl(175, 80%, 45%);
+}
+
+/* Sunset Theme: Golden Amber Warmth */
+[data-theme="sunset"] {
+  --bg: hsl(20, 45%, 4%);
+  --sidebarBg: hsl(20, 50%, 8%);
+  --mainBg: hsl(20, 45%, 6%);
+  --card1: hsl(20, 35%, 12%);
+  --card2: hsl(20, 35%, 9%);
+  --tagBg: rgba(255, 255, 255, 0.03);
+  --textColor: hsl(20, 25%, 95%);
+  --textMuted: hsl(20, 15%, 65%);
+  --line-clr: rgba(255, 255, 255, 0.1);
+  --line-clr-blue: hsl(25, 50%, 28%);
+  --active-clr: hsla(25, 100%, 40%, 0.14);
+  --hover-clr: hsla(25, 100%, 35%, 0.08);
+  --theme: hsl(25, 85%, 55%);
+  --theme2: hsl(355, 65%, 35%);
+  --theme3: #e11d48;
+  --theme4: hsl(45, 95%, 60%);
+}
+
+/* Forest Theme: Enchanted Moss & Sage */
+[data-theme="forest"] {
+  --bg: hsl(120, 25%, 94%);
+  --sidebarBg: hsl(120, 25%, 89%);
+  --mainBg: hsl(120, 25%, 96%);
+  --card1: hsl(120, 20%, 100%);
+  --card2: hsl(120, 20%, 94%);
+  --tagBg: rgba(0, 0, 0, 0.03);
+  --textColor: hsl(120, 40%, 15%);
+  --textMuted: hsl(120, 15%, 40%);
+  --line-clr: rgba(0, 0, 0, 0.08);
+  --line-clr-blue: hsl(140, 40%, 70%);
+  --active-clr: hsla(140, 80%, 30%, 0.08);
+  --hover-clr: hsla(140, 80%, 30%, 0.04);
+  --theme: hsl(140, 50%, 35%);
+  --theme2: hsl(160, 45%, 30%);
+  --theme3: #be123c;
+  --theme4: hsl(35, 85%, 40%);
+}
+
+/* Lavender Theme: Royal Mauve Elegance */
+[data-theme="lavender"] {
+  --bg: hsl(270, 30%, 95%);
+  --sidebarBg: hsl(270, 30%, 91%);
+  --mainBg: hsl(270, 30%, 97%);
+  --card1: hsl(0, 0%, 100%);
+  --card2: hsl(270, 25%, 94%);
+  --tagBg: rgba(0, 0, 0, 0.03);
+  --textColor: hsl(270, 45%, 15%);
+  --textMuted: hsl(270, 15%, 45%);
+  --line-clr: rgba(0, 0, 0, 0.09);
+  --line-clr-blue: hsl(270, 55%, 75%);
+  --active-clr: hsla(270, 80%, 40%, 0.08);
+  --hover-clr: hsla(270, 80%, 40%, 0.04);
+  --theme: hsl(270, 60%, 45%);
+  --theme2: hsl(290, 50%, 40%);
+  --theme3: #db2777;
+  --theme4: hsl(330, 80%, 45%);
+}
+
+/* Smooth Transition on Theme Switches */
+*, *::before, *::after {
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.3s ease-out,
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apply Theme Variables to Global Styles */
+html, body {
+  background-color: var(--mainBg);
+  color: var(--textColor);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+body {
+  /* Dynamic Cyber grid mapping similar to vectorgraph */
+  background-image: 
+    linear-gradient(var(--line-clr) 0.5px, transparent 0.5px),  
+    linear-gradient(90deg, var(--line-clr) 0.5px, transparent 0.5px);  
+  background-size: 40px 40px;  
+  background-position: center center;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-clr-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme);
+}

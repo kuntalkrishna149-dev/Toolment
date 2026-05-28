@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": "owner-kuntal-principal",
+      "username": "Kuntal Krishna (Owner)",
+      "email": "kuntal2010oct@gmail.com",
+      "password": "vinay10133",
+      "role": "owner",
+      "isAdmin": true,
+      "preferences": {
+        "theme": "ocean",
+        "favoriteTools": [
+          "color visualize",
+          "vector graph"
+        ]
+      }
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "seed-feedback-1",
+      "name": "Initial Tester",
+      "email": "test@example.com",
+      "type": "General Feedback",
+      "rating": 5,
+      "comment": "This dashboard workspace is super fast and beautiful! Loving the HSL Color Labs interactive tool.",
+      "createdAt": "2026-05-26T22:08:55.416Z",
+      "simulatedEmailSent": true
+    }
+  ],
+  "tools": [
+    {
+      "id": "vector graph",
+      "name": "Vector Graph",
+      "desc": "An endless grid designed for exact geometry calculations. Plot custom vector coordinates, evaluate intersecting nodes, design custom shapes, and visualize complex polygons instantly.",
+      "link": "https://vectorgraph.netlify.app",
+      "tags": [
+        "geometric",
+        "graph",
+        "shape",
+        "vector",
+        "infinite",
+        "visualizer"
+      ],
+      "isInternalWorkspace": false,
+      "accessType": "url"
+    },
+    {
+      "id": "color visualize",
+      "name": "Color Visualizer",
+      "desc": "Deep HSL spectrum explorer. Calibrate Hue angles, modify saturation gradients, control alpha opacity channels, compute harmonies, evaluate luminance ratios, and copy code payloads instantly.",
+      "link": "/api/tools/files/Colorvisualizer.html",
+      "tags": [
+        "color",
+        "hsl",
+        "rgba",
+        "palette",
+        "rgb",
+        "hsla",
+        "compiler"
+      ],
+      "isInternalWorkspace": false,
+      "accessType": "file",
+      "uploadedFilename": "Colorvisualizer.html",
+      "uploadedFilenames": [
+        "Colorvisualizer.html"
+      ]
+    },
+    {
+      "id": "hop square",
+      "name": "Hop Square",
+      "desc": "Interact with physics bounds, gravitational values, and kinetic speeds inside this cosmic interactive game suite. Bounce off polygons and evaluate vector jump curves.",
+      "link": "https://hopsquaretoolment.netlify.app",
+      "tags": [
+        "game",
+        "space",
+        "gravity",
+        "jump",
+        "kinetics",
+        "physics"
+      ],
+      "isInternalWorkspace": false,
+      "accessType": "url",
+      "uploadedFilenames": []
+    }
+  ]
+}
